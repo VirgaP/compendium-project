@@ -1,0 +1,49 @@
+.card-wrapper:hover{
+    background: linear-gradient(360deg, #FFEEE9 10.07%, #EFE4FF 100%);;
+}
+.card {
+    display: flex;
+    padding: 0.6rem 1rem 0.2rem 1rem;
+  
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 0 1rem ;
+        @media only screen and (max-width: 768px) {
+            padding: 0 .1rem 0 1rem;
+        }
+
+        &-title {
+            font-size: 2rem;
+            font-weight: 300;
+            line-height: 2.4rem;
+        }
+
+        &-description {
+            font-size: 1.6rem;
+            font-weight: 300;
+        }
+    }
+
+    &__arrow{
+        margin-left: auto;
+    }
+
+    .avatar-wrapper{
+        width: 55px;
+        height: 55px;
+
+        .default-avatar{
+            width: 45px;
+            height: 45px;
+            padding: 1rem;
+        }
+        .profile-avatar{
+            width: 45px;
+            height: 45px;
+        }
+    }
+}

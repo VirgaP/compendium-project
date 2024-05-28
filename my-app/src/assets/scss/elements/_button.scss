@@ -1,0 +1,107 @@
+%btn{
+    cursor: pointer;
+    user-select: none;
+    text-decoration: none;
+    display: inline-block;
+    border: white 1px solid;
+    border-radius: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    letter-spacing: 1px;
+    font-family: $font-main;
+    font-size: 1.6rem;
+    font-weight: 400;
+    text-align: center;
+    padding: 14px 20px 14px 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: background-color 250ms;
+
+    @media (max-width: 768px) {
+       padding: 10px 15px;
+    }
+}
+
+.btn-no-style{
+    display: inline-block;
+    border: none;
+    color: inherit;
+    font-family: $font-main;
+    background: transparent;
+    cursor: pointer;
+}
+
+.btn-default{
+    @extend %btn;
+    background-color: white ;
+    color: #3B3447;
+    ;
+}
+
+.btn-primary{
+    @extend %btn;
+    background-color: $medium-grey;
+    color: white
+}
+
+.btn-facebook{
+    @extend %btn;
+    background-color: $blue;
+    color: white;
+}
+
+.btn-google{
+    @extend %btn;
+    background-color: $bright-red;
+    color: white
+}
+
+.btn-secondary{
+    @extend %btn;
+    background-color: $black;
+    color: white
+}
+
+.btn-primary:hover{
+    background-color: black;
+}
+
+.btn-secondary:hover{
+    background-color: $light-grey;
+}
+
+.btn-xs{
+    width: 30%
+}
+.btn-s{
+    width: 40%
+}
+
+.btn-sm{
+    width: 50%;
+}
+
+.btn-m{
+    width: 60%;
+}
+
+.btn-l{
+    width: 75%;
+}
+
+.btn-xl{
+    width: 90%;
+}
+
+.btn-full{
+    width: 100%
+}
+
+.btn-contain{
+    @media only screen and (max-width: 768px) {
+      width: fit-content !important;
+    }
+  }

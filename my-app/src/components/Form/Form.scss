@@ -1,0 +1,149 @@
+@import '../../assets/scss/abstracts/colors';
+
+.select-options-inner-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.option-input-group{
+    // border-bottom: 1px solid $light-grey;
+
+    .label-container {
+    color: $primary-font;    
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 1.6rem;
+    font-weight: 300;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+        @media (max-width: 768px) {
+            font-size: 1.4rem;
+        }
+    }
+
+    /* Hide the browser's default checkbox */
+    .label-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+    }
+
+    /* Create a custom checkbox */
+    .checkmark {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    height: 1.6rem;
+    width: 1.6rem;
+    border: solid 1px $violet;
+    }
+
+    .checkmark-radio {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 18px;
+        width: 18px;
+        background-color: transparent;
+        border: solid 1px $violet;
+        border-radius: 50%;
+    }
+
+    /* When the checkbox is checked, add a blue background */
+    .label-container input:checked ~ .checkmark {
+    background-color: $violet;
+    }
+
+    .label-container input:checked ~ .checkmark-radio {
+        background-color: white;
+        border: $violet solid 1px,
+    }
+
+    /* Create the checkmark/indicator (hidden when not checked) */
+    .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    }
+
+    .checkmark-radio:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+
+    /* Show the checkmark when checked */
+    .label-container input:checked ~ .checkmark:after {
+    display: block;
+    }
+
+    /* Show the checkmark when checked */
+    .label-container input:checked ~ .checkmark-radio:after {
+    display: block;
+    }
+
+    /* Style the checkmark/indicator */
+    .label-container .checkmark:after {
+    left: 3px;
+    top: 0;
+    width: 5px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    }
+
+    /* Style the indicator (dot/circle) */
+    .label-container .checkmark-radio:after {
+    width: 11px;
+    height: 11px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    padding: .5px;
+    border-radius: 50%;
+    background: $violet;
+    }
+}
+.radio-input{
+    // width:450px;
+    width: 100%;
+    height:75px;
+        @media (max-width: 768px) {
+            width:100%;
+        }
+    }
+    .radio-input:hover{
+        background-color: $violet-faded;
+    }
+
+.select-input{
+    width:250px;
+    height:50px;
+    
+        @media (max-width: 768px) {
+            width:150px;
+        }
+    }
+    .form-select >.select-input{
+        width:100%;
+    }
+    .select-input:hover{
+        background-color: $light-grey-transperant;
+    }    

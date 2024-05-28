@@ -1,0 +1,73 @@
+@import '../abstracts/colors';
+
+.sticky-container {
+    position: fixed;
+    width: calc(100% - 1px);
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    @media only screen and (max-width: 768px) {
+        background: white;
+        bottom: 50px;
+    }
+    .sticky__btn-wrapper{
+        display: flex;
+        justify-content: space-between;
+        width: 50%;
+        margin:1.5rem auto;
+    }
+    .sticky-page-hidden{
+        background-color: $violet;
+        color: white;
+        font-size: 1.6rem;
+        padding: 2rem;
+        @media only screen and (max-width: 768px) {
+            text-align: center;
+            padding: 1.5rem;
+        }
+    }
+}
+
+.sticky-container-top{
+    position: fixed;
+    width: calc(100% - 71px);
+    top: 0;
+    left: 70px;
+    z-index: 999;
+    margin-top: -1rem;
+    @media only screen and (max-width: 600px) {
+        width: calc(100% - 1px);
+        top: 0;
+        left: 0;
+    }
+    .sticky-save{
+        padding: 1rem 2rem;
+        @media only screen and (max-width: 600px) {
+            padding-top: 7.4rem;
+        }
+        button{
+            width: 100%;
+            padding: 1rem;
+            text-align: right;
+            background: white;
+            @media only screen and (max-width: 600px) {
+                padding: .5rem 1rem;
+               
+            }
+        }
+    }
+
+    .sticky__btn-wrapper{
+        display: flex;
+        justify-content: space-evenly;
+        width: 50%;
+        @media only screen and (max-width: 600px) {
+            justify-content: space-between;
+        }
+    }
+    .event-btn-container{
+        background: white;
+        width: 100%;
+        padding: 1.5rem;
+    }
+}

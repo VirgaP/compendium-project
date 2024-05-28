@@ -1,0 +1,106 @@
+.animated{
+    animation-fill-mode: both;
+    }
+    
+.fadeInDown {
+     animation: fadeInDown ease 10s;
+    -webkit-animation: fadeInDown ease 10s;
+     -moz-animation: fadeInDown ease 10s;
+    -o-animation: fadeInDown ease 10s;
+    -ms-animation: fadeInDown ease 10s;
+}
+    
+    @keyframes fadeInDown{
+        0% {
+           opacity: 0;
+           transform: translateY(-20px);
+        }
+        100% {
+           opacity: 1;
+           transform: translateY(0);
+        }
+     } 
+    
+     @-webkit-keyframes fadeInDown{
+        0% {
+           opacity: 0;
+           transform: translateY(-20px);
+        }
+        100% {
+           opacity: 1;
+           transform: translateY(0);
+        }
+     } 
+      
+      .fadeOutUp {
+          -webkit-animation-name: fadeOutUp;
+          animation-name: fadeOutUp;
+       }
+      @keyframes fadeOutUp {
+        0% {
+            opacity: 1;
+            transform: translateY(0);
+         }
+         100% {
+            opacity: 0;
+            transform: translateY(-20px);
+         }
+      }
+    
+      .fadeIn {
+       -webkit-animation-name: fadeIn;
+       animation-name: fadeIn;
+       }
+       @keyframes fadeIn {
+       0% {opacity:0;}
+       100% {opacity:1;}
+       }
+       
+       @-moz-keyframes fadeIn {
+       0% {opacity:0;}
+       100% {opacity:1;}
+       }
+       
+       @-webkit-keyframes fadeIn {
+       0% {opacity:0;}
+       100% {opacity:1;}
+       }
+       
+       @-o-keyframes fadeIn {
+       0% {opacity:0;}
+       100% {opacity:1;}
+       }
+       
+       @-ms-keyframes fadeIn {
+       0% {opacity:0;}
+       100% {opacity:1;}
+       }
+    
+       .fadeOut {
+          -webkit-animation-name: fadeOut;
+          animation-name: fadeOut;
+       }
+       @keyframes fadeOut {
+       0% {opacity:1;}
+       100% {opacity:0;}
+       }
+       
+       @-moz-keyframes fadeOut {
+       0% {opacity:1;}
+       100% {opacity:0;}
+       }
+       
+       @-webkit-keyframes fadeOut {
+       0% {opacity:1;}
+       100% {opacity:0;}
+       }
+       
+       @-o-keyframes fadeOut {
+       0% {opacity:1;}
+       100% {opacity:0;}
+       }
+       
+       @-ms-keyframes fadeOut {
+       0% {opacity:1;}
+       100% {opacity:0;}
+       }   

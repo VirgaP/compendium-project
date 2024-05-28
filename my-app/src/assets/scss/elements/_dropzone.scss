@@ -1,0 +1,32 @@
+@import '../abstracts/colors';
+
+.dropzone__container{
+    position: relative;
+    .dropzone__btn-wrapper{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+ }
+
+ .dropzone{
+    background: linear-gradient(0deg, #F2F8FF 0%, rgba(240, 229, 255, 0) 94.88%);
+    padding: 20px;
+
+    &__inner_wrapper{
+       padding: 30px 0;
+       cursor: pointer;
+    }
+
+    &__icon{
+       text-align: center;
+       display: block;
+       padding-bottom: 2rem;
+    }
+    &__text{
+       font-size: 1.6rem;
+       text-align: center;
+       font-weight: 400;
+       color: $black;
+    }
+ }

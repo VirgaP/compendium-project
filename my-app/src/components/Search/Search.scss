@@ -1,0 +1,207 @@
+@import '../../assets/scss/abstracts/colors';
+
+.search {
+    padding: 1.7rem;
+    font-size: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    @media only screen and (max-width: 600px) { 
+        height: 100vh;
+        overflow: scroll;
+        padding-bottom: 8rem;
+    }
+
+    &__header {
+        display: flex;
+        // padding: 5.2rem 0rem 4rem 0rem;
+
+        &-icon {
+            padding-left: 1.1rem;
+            cursor: pointer;
+        }
+
+    }
+
+    &__input {
+        label {
+            display: grid;
+            font-size: 1.8rem;
+
+            p {
+                padding-left: 1.1rem;
+            }
+
+            input[type="text"],
+            textarea {
+                padding: 0.5rem 1rem 0.5rem 5rem;
+                margin-top: 1rem;
+                height: 3rem;
+                border: none;
+                border-bottom: 0.1rem solid black;
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+    &__profile {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 2rem;
+   
+        .option-input-group{
+            width: 40%;
+            border-bottom: none;
+            @media only screen and (max-width: 600px) { 
+                width: 50%;
+            }
+            .label-container{
+               padding-left: 4.5rem;    
+               @media only screen and (max-width: 600px) { 
+                padding-left: 3.5rem;    
+                }
+                .checkmark-radio{
+                    width: 25px;
+                    height: 25px;
+                    border: none !important;
+                }       
+            }  
+            &:nth-of-type(4n+0) label .checkmark-radio{
+                background-color: $violet !important;
+            }
+            &:nth-of-type(4n+1) label .checkmark-radio {
+                background-color: $red !important;
+            }
+            &:nth-of-type(4n+2) label .checkmark-radio{
+                background-color: $blue !important;
+            }
+            &:nth-of-type(4n+3) label .checkmark-radio{
+                background-color: $orange !important;
+            }
+
+            .label-container input:checked ~ .checkmark-radio:after {
+                display: none;
+                border: none;
+            }
+            .label-container input:checked ~ .option-title {
+                font-weight: 500;
+            }
+        }
+        .radio-input:hover{
+            background-color:transparent;
+        } 
+    }
+    &__discipline {
+        display: flex;
+        flex-wrap: wrap;
+
+        .discipline-input-group{ 
+            border-bottom: none;
+            margin-right: 2rem;
+            width: auto;
+            height: 7rem;
+            @media only screen and (max-width: 600px) { 
+                height: 5rem;
+                margin-right: 1rem;
+            }
+        }
+        .discipline-input-group .discipline-label-container {
+            padding: .5rem 1.5rem;
+            border: 1px solid $black !important;
+            width: fit-content;
+            cursor: pointer;
+            @media only screen and (max-width: 600px) { 
+                padding: .5rem .7rem ;
+                margin-right: 1rem;
+              }
+              
+            input {
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+                height: 0;
+                width: 0;
+            }
+            .option-title{
+                color: $black;
+                font-weight: 300;
+                font-size: 1.6rem;
+            }
+            input:checked ~ .option-title {
+                font-weight: 500;
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    &__slider{
+        padding: 2rem;
+        @media only screen and (max-width: 600px) { 
+            padding: 2rem 0;
+            margin-left: 4rem;
+            margin-right: 3rem;
+            position: relative;
+          }
+
+        label{
+        @media only screen and (max-width: 600px) { 
+            position: absolute;
+            left: -2.5rem;
+            top: 4rem;
+            }
+        }
+        .input{
+            text-align: right;
+            padding: 1rem 0;
+            font-size: 1.6rem;
+            font-weight: 300;
+        }
+    }
+
+    &__btn-container{
+        text-align: center;
+        background-color: white;
+    }
+    &__button {
+       margin-left: 2rem;
+       width: 15%;
+       @media only screen and (max-width: 600px) { 
+        width: 45%;
+        margin-left: 0;
+      }
+    }
+}
+.active-point{
+    background: linear-gradient(360deg, #FFEEE9 10.07%, #EFE4FF 100%);
+}
+
+.label {
+    display: inline-block;
+    padding-left: 3rem;
+    background: url(../../assets/svg/box-uncheked.svg) no-repeat 0;
+}
+
+.horizontal-slider{
+    border: 1px solid $grey;
+}
+.example-thumb{
+    position: absolute;
+    touch-action: none;
+    z-index: 1;
+    left: 47.0657px;
+    border: 1px solid;
+    border-radius: 50%;
+    padding: 0.5rem 1rem;
+    top: -1.5rem;
+    width: 3rem;
+    height: 3rem;
+    background: white;
+    will-change: left;
+} 
+
+.load-more{
+    margin-top: -2rem;
+    margin-bottom: 2rem;
+    @media only screen and (max-width: 600px) { 
+        margin-bottom: 4.5rem;
+    }
+}

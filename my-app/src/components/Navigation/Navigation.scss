@@ -1,0 +1,243 @@
+@import '../../assets/scss/abstracts/colors';
+
+.nav {
+    height: 9.1rem;
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+
+    &__text {
+        font-size: 2.2rem;
+    }
+
+    &__links {
+        margin-left: auto;
+        padding-right: 1.1rem;
+
+        &-item {
+            padding: 0rem 0rem 0rem 5rem;
+        }
+    }
+}
+
+.active-url{
+    background: linear-gradient(360deg, #FFEEE9 10.07%, #EFE4FF 100%);
+    border-radius: 50%;
+    width: 3.5rem;
+    height: 3.5rem;
+    @media only screen and (max-width: 600px) {
+        // top: 50%;
+    }
+
+    .user-icon{
+        position: relative;
+        top: 45%;
+        left: 3%;
+        transform: translateY(-50%);
+        @media only screen and (max-width: 600px) {
+           left: 0;
+        }
+    }
+
+}
+.sidebar-user.active-url{
+    margin-top: -5px;
+    @media only screen and (max-width: 600px) {
+        margin-top: 0;
+        margin-right: -5px;
+        }
+}
+
+.active-url{
+    background: linear-gradient(360deg, #FFEEE9 10.07%, #EFE4FF 100%);
+    // padding: .7rem;
+    border-radius: 50%;
+    width: 3.5rem;
+    height: 3.5rem;
+    @media only screen and (max-width: 600px) {
+        top: 40%;
+    }
+
+    .map-icon{
+        // width: 1.8rem;
+        // height: 1.8rem;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.sidebar-map.active-url{
+    margin-top: -5px;
+    @media only screen and (max-width: 600px) {
+        margin-top: 0;
+        margin-right: -5px;
+    }
+}
+
+
+// <<<<< Page and Page Sidebar >>>>>
+%sidebar-avatar{
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 2px solid;
+  }
+  %sidebar-avatar-wrapper{
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    border: 2px solid;
+    padding: .34rem;
+  }
+  .sticky-wrapper{
+      position: fixed;
+    //   height: calc(100% - 150px);
+      background: white;
+      left: 20px;
+      top:0;
+    @media only screen and (max-width: 768px) {
+      position: fixed;
+      width: calc(100% - 5px);
+      height: 50px;
+      background: white;
+      bottom: 0;
+      left: 0;
+      top: unset;
+      z-index: 999;
+    }
+  }
+.mobile-top-menu{ 
+    padding-top: 8rem;
+    #first-menu{
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        height: 65px;
+        background-color: white;
+        width: 100%;
+        .menu-row-wrapper{
+            top: 50%;
+            transform: translateY(-50%);
+            position: absolute;
+            padding-top: 1rem;
+        }
+        .menu-icon-wrapper{
+            max-width: 40px;
+            position: relative;
+            padding: 0 2rem;
+            img{
+                top: 50%;
+                transform: translateY(-50%);
+                position: absolute;
+            }
+        }
+        .page__sidebar-pages-list{
+        position: relative;
+        height: auto;
+        width: 55px;
+        left: 50%;
+        top: 0rem;
+        transform: translateX(-50%);
+        .page__sidebar-pages-list-wrapper{
+            overflow-x: scroll;
+            overflow-y: hidden;
+            white-space: nowrap;
+            width: calc(100% - 40px);
+            a:nth-child(n) {
+                display: inline-block;
+                margin-right: 1rem;
+            }
+            .user-page-avatar:nth-of-type(3n+0) .profile-avatar-sidebar {
+            @extend %sidebar-avatar;
+            border-color: $light-blue
+            }
+            .user-page-avatar:nth-of-type(3n+0) .default-avatar-sidebar {
+            @extend %sidebar-avatar;
+            background: $light-blue;
+            border-color: $light-blue;
+            padding: 1.25rem;
+            margin: auto;
+            }
+            .user-page-avatar:nth-of-type(3n+0) .avatar-wrapper-sidebar {
+            @extend %sidebar-avatar-wrapper;
+            border-color:$light-blue;
+            }
+            .user-page-avatar:nth-of-type(3n+1) .profile-avatar-sidebar {
+            @extend %sidebar-avatar;
+            border-color: $red
+            }
+            .user-page-avatar:nth-of-type(3n+1) .default-avatar-sidebar {
+            @extend %sidebar-avatar;
+            background: $red;
+            border-color: $red;
+            padding: 1.25rem;
+            margin: auto;
+            }
+            .user-page-avatar:nth-of-type(3n+1) .avatar-wrapper-sidebar {
+            @extend %sidebar-avatar-wrapper;
+            border-color:$red;
+            }
+            .user-page-avatar:nth-of-type(3n+2) .profile-avatar-sidebar {
+            @extend %sidebar-avatar;
+            border-color: $orange
+            }
+            .user-page-avatar:nth-of-type(3n+2) .default-avatar-sidebar {
+            @extend %sidebar-avatar;
+            background: $orange;
+            border-color: $orange;
+            padding: 1.25rem;
+            margin: auto;
+            }
+            .user-page-avatar:nth-of-type(3n+2) .avatar-wrapper-sidebar {
+            @extend %sidebar-avatar-wrapper;
+            border-color:$orange;
+            }
+        }
+        }
+    }
+    #second-menu{
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        top: 10px;
+        width: 100%;
+        background: white;
+        height: 55px;
+
+        .menu-row{
+            display: flex;
+            justify-content: center;
+            top: 5%;
+            // top: 50%;
+            transform: translateY(-50%);
+            position: absolute;
+            background: $black ;
+            padding: 1rem;
+            width: 88%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .menu-column{
+            padding: 0 .5rem;;
+        }
+        .menu-column > img{
+            width: 2rem;
+        }
+        div > span{
+            color: white;
+            font-size: 1.6rem;
+        }
+    }
+    #third-menu{
+        position: fixed;
+        left: 0;
+        z-index: 3;
+        top: 6.5rem;
+        height: 35px;
+        background-color: white;
+        width: 100%;
+    }
+}

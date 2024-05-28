@@ -1,0 +1,102 @@
+@import '../../assets/scss/abstracts/colors';
+.profile{
+    // width: 80%;
+    margin: auto;
+    padding-top: 2rem;
+
+    .flex-container > .flex-col{
+        max-width: 40%;
+        @media only screen and (max-width: 768px) {
+            max-width: 100%;
+        }
+    }
+
+   &__cardlist-container{
+    max-height: 90vh;
+    overflow-y: scroll;
+    @media only screen and (max-width: 600px) {
+      max-height: 45vh;
+      overflow-y: scroll;      }
+   }
+}
+
+.modal-avatar-wrapper{
+
+    .default-avatar{
+        width: 35px;
+        height: 35px;
+        // background-color: #7245B2;
+        padding: .6rem;;
+    }
+    .modal-avatar{
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        // background-color: #7245B2;
+        // border: 2px solid #7245B2;
+    }
+    .default-avatar.red{
+        background: $red;
+      }
+      .default-avatar.orange{
+        background: $orange;
+      }
+      .default-avatar.blue{
+        background: $blue;
+      }
+      .default-avatar.violet{
+        background: $violet;
+      }
+
+      .modal-avatar.red{
+        border: 2px solid $red;
+      }
+      .modal-avatar.orange{
+        border: 2px solid $orange;
+      }
+      .modal-avatar.blue{
+        border: 2px solid $blue;
+      }
+      .modal-avatar.violet{
+        border: 2px solid $violet;
+      }
+}
+
+
+div.modal__value-container{
+    min-height: 5rem;
+    margin-top: .5rem;
+    .modal__placeholder{
+        font-size: 1.6rem;
+        font-family: 'Jost', sans-serif;
+        font-weight: 300;;
+    }
+}
+.modal-select-col-wrapper{
+   width: 80%;
+   margin-bottom: 2rem;
+
+   @media only screen and (max-width: 600px) {
+    width:70%;
+    }
+}
+
+.modal-form-select{
+    margin-top: 5rem;
+    @media only screen and (max-width: 600px) {
+        margin-top: 3rem;
+    }
+}
+
+.invite-link{
+    max-width: 80%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: .5rem 1rem;
+    font-size: 1.4rem;
+    margin: 2rem auto;
+    }
+
+
+
